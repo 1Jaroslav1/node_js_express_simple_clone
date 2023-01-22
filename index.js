@@ -14,9 +14,11 @@ app.addRouter(userRouter);
 
 const start = async () => {
     try {
-        await mongoose.connect('mongodb+srv://atom772:atom_uran@cluster0.3reld3d.mongodb.net/?retryWrites=true&w=majority')
+        await mongoose.connect('mongodb+srv://atom772:atom_uran@cluster0.3reld3d.mongodb.net/?retryWrites=true&w=majority');
         app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
     } catch (e) {
         console.log(e);
     }
 }
+
+start()
